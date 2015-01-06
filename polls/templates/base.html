@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Spark Zones</title>
+    <title>Spark Zones - Data enlighten the world</title>
 
     {% load staticfiles %}
 
@@ -48,19 +48,19 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            {% comment %}<li class="active"><a href="#">Home</a></li>{% endcomment %}
+            <li><a href="#solution">Solutions</a></li>
+            <li><a href="#product">Products</a></li>
+            <li><a href="#case-study">Case Study</a></li>
+            <li><a href="#sign-up">Sign Up</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Contact</a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                {% comment %}<li class="dropdown-header">Nav header</li>{% endcomment %}
+                <li><a href="#">Client Login</a></li>
               </ul>
             </li>
           </ul>
@@ -68,12 +68,11 @@
       </div>
     </nav>
 
-    <div class="container theme-showcase" role="main">
-        {% block content %}
-        {% endblock %}
+    <!--<div class="container theme-showcase" role="main">
 
-    </div> <!-- /container -->
-
+    </div>  /container -->
+      {% block content %}
+      {% endblock %}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

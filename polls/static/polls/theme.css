@@ -1,4 +1,4 @@
-body {
+/*body {
   padding-top: 70px;
   padding-bottom: 30px;
 }
@@ -15,4 +15,9 @@ body {
 
 .theme-showcase .navbar .container {
   width: auto;
+}*/
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
 }

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block content %}
 
@@ -13,36 +14,61 @@
     {% endif %}{% endcomment %}
 
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Theme example</h1>
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
-      </div>
+      <!-- Main jumbotron for a primary marketing message or call to action
+      <div class="page-header">
+        <h1>Spark Zones</h1>
+        <h2>Data enlighten the world</h2>
+      </div>-->
 
       {% comment %}<div class="page-header">
         <h1>Thumbnails</h1>
       </div>
       <img data-src="holder.js/200x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">{% endcomment %}
 
-
-      <div class="page-header">
-        <h1>Carousel</h1>
-      </div>
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <div id="carousel-example-generic" class="carousel slide" data-pause="false" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
           <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="4"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img data-src="holder.js/1140x500/auto/#777:#555/text:First slide" alt="First slide">
+            {% comment %}<img data-src="holder.js/1920x500/auto/#777:#555/text:First slide" alt="First slide">{% endcomment %}
+              <img src="{% static 'polls/images/0.jpg' %}" alt="First slide"/>
+              <div class="carousel-caption">
+                  <h2>Customer-Centric Analysis</h2>
+                  <p>Everything you need to know about your customers, and how to turn that knowledge into profit</p>
+              </div>
           </div>
           <div class="item">
-            <img data-src="holder.js/1140x500/auto/#666:#444/text:Second slide" alt="Second slide">
+            <img src="{% static 'polls/images/1.jpg' %}" alt="Second slide">
+              <div class="carousel-caption">
+                  <h2>Media-Centric Analysis</h2>
+                  <p>Gain insight into your media investment and optimize your ROI</p>
+              </div>
           </div>
           <div class="item">
-            <img data-src="holder.js/1140x500/auto/#555:#333/text:Third slide" alt="Third slide">
+            <img src="{% static 'polls/images/2.jpg' %}" alt="Second slide">
+              <div class="carousel-caption">
+                  <h2>Campaign-Centric Analysis</h2>
+                  <p>How to design an effective marketing campaign and how to monitor and evaluate the performance of it</p>
+              </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'polls/images/3.jpg' %}" alt="Third slide">
+              <div class="carousel-caption">
+                  <h2>Product-Centric Analysis</h2>
+                  <p>Making better pricing strategy and understand the association of the products could increase your sales and profits</p>
+              </div>
+          </div>
+          <div class="item">
+            <img src="{% static 'polls/images/4.jpg' %}" alt="Fourth slide">
+              <div class="carousel-caption">
+                  <h2>Spark Zones</h2>
+                  <p>Data enlighten the world</p>
+              </div>
           </div>
         </div>
       </div>
