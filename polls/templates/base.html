@@ -17,9 +17,28 @@
     <link href="{% static 'polls/css/bootstrap.min.css' %}" rel="stylesheet"/>
     <!-- Bootstrap theme -->
     <link href="{% static 'polls/css/bootstrap-theme.min.css' %}" rel="stylesheet"/>
+    <!-- Bootstrap slider -->
+    <link href="{% static 'polls/css/bootstrap-slider.css' %}" rel="stylesheet"/>
+    <!-- nvd3 theme -->
+    <link href="{% static 'polls/css/nv.d3.min.css' %}" rel="stylesheet"/>
 
-    <!-- Custom styles for this template -->
+    <!-- Custom styles for this project -->
     <link href="{% static 'polls/theme.css' %}" rel="stylesheet"/>
+
+    <!-- jquery and bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{% static 'polls/scripts/bootstrap.min.js' %}"></script>
+    <script src="{% static 'polls/scripts/bootstrap-slider.js' %}"></script>
+
+    <!-- nvd3 -->
+    <script src="{% static 'polls/scripts/nvd3/d3.v3.min.js' %}"></script>
+    <script src="{% static 'polls/scripts/nvd3/nv.d3.min.js' %}"></script>
+    <!-- including all the components so I don't have to minify every time I test in development -->
+    <script src="{% static 'polls/scripts/nvd3/tooltip.js' %}"></script>
+    <script src="{% static 'polls/scripts/nvd3/utils.js' %}"></script>
+    <script src="{% static 'polls/scripts/nvd3/axis.js' %}"></script>
+    <script src="{% static 'polls/scripts/nvd3/discreteBar.js' %}"></script>
+    <script src="{% static 'polls/scripts/nvd3/discreteBarChart.js' %}"></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -77,8 +96,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="{% static 'polls/scripts/bootstrap.min.js' %}"></script>
     <script src="{% static 'polls/scripts/docs.min.js' %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{% static 'polls/scripts/ie10-viewport-bug-workaround.js' %}"></script>

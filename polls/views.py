@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.views import generic
 from django.utils import timezone
@@ -16,13 +16,6 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Return the last five published questions."""
-        conn = pyRserve.connect()
-        conn.eval('rm(list=ls())')
-        budget = 20000
-        conn.r.input_total_amt = budget
-        res2 = conn.eval("source('C:/Users/yixiang/Desktop/opt_total.R')")
-        json.loads(res2['value'])
-        json.loads(res2['value'])[u'decomp_sales']
         return Question.objects.filter(
             pub_date__lte=timezone.now()
         ).order_by('-pub_date')[:5]
@@ -61,3 +54,12 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(p.id,)))
+
+def get_opt(request, budget):
+    conn = pyRserve.connect()
+    conn.eval('rm(list=ls())')
+    conn.r.input_total_amt = budget
+    res2 = conn.eval("source('C:/Users/yixiang/Desktop/opt_total.R')")
+    json.loads(res2['value'])
+    json.loads(res2['value'])[u'decomp_sales']
+    return HttpResponse(json.dumps(res2['value']), mimetype='application/json')

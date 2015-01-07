@@ -17,7 +17,23 @@
   width: auto;
 }*/
 
+.slider-handle {
+    opacity: 1.0;
+}
+
 .row {
   margin-right: 0px;
   margin-left: 0px;
+}
+
+.svg-md{
+  height: 500px;
+  min-width: 100px;
+  min-height: 100px;
+/*
+  margin: 10px;
+  Minimum height and width is a good idea to prevent negative SVG dimensions...
+  For example width should be =< margin.left + margin.right + 1,
+  of course 1 pixel for the entire chart would not be very useful, BUT should not have errors
+*/
 }

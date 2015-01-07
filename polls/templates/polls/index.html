@@ -74,12 +74,19 @@
       </div>
 
 
-      <div class="page-header">
-        <h1>Wells</h1>
-      </div>
-      <div class="well">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
-      </div>
+      <div class="container">
+
+        <div class="page-header">
+          <h1>Mix Media Optimizer</h1>
+        </div>
+        <div class="well">
+          <p>Budget $200,000
+          <input id="slide" data-slider-id='ex1Slider' type="text" data-slider-min="200000" data-slider-max="800000" data-slider-step="100000" data-slider-value="500000" />
+          $800,000</p>
+        </div>
+        <div id="chart1" class="svg-md">
+          <svg></svg>
+        </div>
 
 
       <div class="page-header">
@@ -193,6 +200,107 @@
             </div>
           </div>
         </div><!-- /.col-sm-4 -->
+      </div>
 
+    </div>
+
+    <script>
+      historicalBarChart = [
+        {
+          key: "Cumulative Return",
+          values: [
+            {
+              "label" : "A" ,
+              "value" : 29.765957771107
+            } ,
+            {
+              "label" : "B" ,
+              "value" : 0
+            } ,
+            {
+              "label" : "C" ,
+              "value" : 32.807804682612
+            } ,
+            {
+              "label" : "D" ,
+              "value" : 196.45946739256
+            } ,
+            {
+              "label" : "E" ,
+              "value" : 0.19434030906893
+            } ,
+            {
+              "label" : "F" ,
+              "value" : 98.079782601442
+            } ,
+            {
+              "label" : "G" ,
+              "value" : 13.925743130903
+            } ,
+            {
+              "label" : "H" ,
+              "value" : 5.1387322875705
+            }
+          ]
+        }
+      ];
+
+      nv.addGraph(function() {
+        var chart = nv.models.discreteBarChart()
+            .x(function(d) { return d.label })
+            .y(function(d) { return d.value })
+            .staggerLabels(false)
+            //.staggerLabels(historicalBarChart[0].values.length > 8)
+            .tooltips(true)
+            .showValues(true)
+            .transitionDuration(250)
+            ;
+
+        d3.select('#chart1 svg')
+            .datum(historicalBarChart)
+            .call(chart);
+
+        nv.utils.windowResize(chart.update);
+
+        return chart;
+      });
+
+
+      $(document).ready(function () {
+          $("#slide").slider({
+              tooltip: 'always',
+              handle: 'round',
+              formatter: function (value) {
+                  var result = "";
+                  var val = value.toString();
+                  while (val.length > 3) {
+                      result += ',' + val.substr(val.length - 4, 3);
+                      val = val.substr(0, val.length - 3);
+                  }
+                  return '$' + val + result;
+              }
+          });
+          $("#slide").on("slideStop", function (slideEvt) {
+              if (slideEvt.value != this.budget) {
+                  alert("ni hao");
+                  //drawChart();
+              }
+          });
+      });
+
+
+    {% comment %}function drawChart() {
+        this.budget = $('#slide').val();
+        if (budget == null) return false;
+        $.getJSON("/polls/50000/budget")
+          .done(function (data) {
+              alert('great');
+          })
+          .fail(function (jqXHR, textStatus, err) {
+              alert('Error: ' + err);
+          });
+    }{% endcomment %}
+
+    </script>
 
 {% endblock %}
