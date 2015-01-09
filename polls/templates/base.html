@@ -37,8 +37,16 @@
     <script src="{% static 'polls/scripts/nvd3/tooltip.js' %}"></script>
     <script src="{% static 'polls/scripts/nvd3/utils.js' %}"></script>
     <script src="{% static 'polls/scripts/nvd3/axis.js' %}"></script>
-    <script src="{% static 'polls/scripts/nvd3/discreteBar.js' %}"></script>
-    <script src="{% static 'polls/scripts/nvd3/discreteBarChart.js' %}"></script>
+    <script src="{% static 'polls/scripts/nvd3/legend.js' %}"></script>
+    <!-- nvd3 discreteBar-->
+{#    <script src="{% static 'polls/scripts/nvd3/discreteBar.js' %}"></script>#}
+{#    <script src="{% static 'polls/scripts/nvd3/discreteBarChart.js' %}"></script>#}
+    <!-- nvd3 multiBar vertical -->
+    <script src="{% static 'polls/scripts/nvd3/multiBar.js' %}"></script>
+    <script src="{% static 'polls/scripts/nvd3/multiBarChart.js' %}"></script>
+    <!-- nvd3 multiBar horizontal-->
+    <script src="{% static 'polls/scripts/nvd3/multiBarHorizontal.js' %}"></script>
+    <script src="{% static 'polls/scripts/nvd3/multiBarHorizontalChart.js' %}"></script>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -92,7 +100,11 @@
     </div>  /container -->
       {% block content %}
       {% endblock %}
-
+    <footer>
+        <div class="text-center">
+            Copyright @2014, All Rights Reserved. Sparkzones Inc.
+        </div>
+    </footer>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

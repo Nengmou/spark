@@ -3,311 +3,441 @@
 
 {% block content %}
 
-    {% if latest_question_list %}
-        <ul>
-        {% for question in latest_question_list %}
-            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No polls are available...</p>
-    {% endif %}
+    <!-- Main jumbotron for a primary marketing message or call to action
+    <div class="page-header">
+      <h1>Spark Zones</h1>
+      <h2>Data enlighten the world</h2>
+    </div>-->
 
-
-      <!-- Main jumbotron for a primary marketing message or call to action
-      <div class="page-header">
-        <h1>Spark Zones</h1>
-        <h2>Data enlighten the world</h2>
-      </div>-->
-
-      {% comment %}<div class="page-header">
+    {% comment %}<div class="page-header">
         <h1>Thumbnails</h1>
       </div>
       <img data-src="holder.js/200x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">{% endcomment %}
 
-      <div id="carousel-example-generic" class="carousel slide" data-pause="false" data-ride="carousel">
+    <div id="carousel-example-generic" class="carousel slide" data-pause="false" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            {% comment %}<img data-src="holder.js/1920x500/auto/#777:#555/text:First slide" alt="First slide">{% endcomment %}
-              <img src="{% static 'polls/images/0.jpg' %}" alt="First slide"/>
-              <div class="carousel-caption">
-                  <h2>Customer-Centric Analysis</h2>
-                  <p>Everything you need to know about your customers, and how to turn that knowledge into profit</p>
-              </div>
-          </div>
-          <div class="item">
-            <img src="{% static 'polls/images/1.jpg' %}" alt="Second slide">
-              <div class="carousel-caption">
-                  <h2>Media-Centric Analysis</h2>
-                  <p>Gain insight into your media investment and optimize your ROI</p>
-              </div>
-          </div>
-          <div class="item">
-            <img src="{% static 'polls/images/2.jpg' %}" alt="Second slide">
-              <div class="carousel-caption">
-                  <h2>Campaign-Centric Analysis</h2>
-                  <p>How to design an effective marketing campaign and how to monitor and evaluate the performance of it</p>
-              </div>
-          </div>
-          <div class="item">
-            <img src="{% static 'polls/images/3.jpg' %}" alt="Third slide">
-              <div class="carousel-caption">
-                  <h2>Product-Centric Analysis</h2>
-                  <p>Making better pricing strategy and understand the association of the products could increase your sales and profits</p>
-              </div>
-          </div>
-          <div class="item">
-            <img src="{% static 'polls/images/4.jpg' %}" alt="Fourth slide">
-              <div class="carousel-caption">
-                  <h2>Spark Zones</h2>
-                  <p>Data enlighten the world</p>
-              </div>
-          </div>
+            <div class="item active">
+                {% comment %}<img data-src="holder.js/1920x500/auto/#777:#555/text:First slide" alt="First slide">{% endcomment %}
+                <img src="{% static 'polls/images/0.jpg' %}" alt="First slide"/>
+                <div class="carousel-caption">
+                    <h2>Customer-Centric Analysis</h2>
+                    <p>Everything you need to know about your customers, and how to turn that knowledge into profit</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{% static 'polls/images/1.jpg' %}" alt="Second slide">
+                <div class="carousel-caption">
+                    <h2>Media-Centric Analysis</h2>
+                    <p>Gain insight into your media investment and optimize your ROI</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{% static 'polls/images/2.jpg' %}" alt="Second slide">
+                <div class="carousel-caption">
+                    <h2>Campaign-Centric Analysis</h2>
+                    <p>How to design an effective marketing campaign and how to monitor and evaluate the performance of it</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{% static 'polls/images/3.jpg' %}" alt="Third slide">
+                <div class="carousel-caption">
+                    <h2>Product-Centric Analysis</h2>
+                    <p>Making better pricing strategy and understand the association of the products could increase your sales and profits</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="{% static 'polls/images/4.jpg' %}" alt="Fourth slide">
+                <div class="carousel-caption">
+                    <h2>Spark Zones</h2>
+                    <p>Data enlighten the world</p>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
 
+    <div class="container">
 
-      <div class="container">
+        {% comment %}{% if latest_question_list %}
+            <ul>
+                {% for question in latest_question_list %}
+                    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No polls are available...</p>
+        {% endif %}{% endcomment %}
+
+        <div class="spark-selection-what">
+            {% comment %}<div class="page-header">
+                <h1>Navs</h1>
+            </div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages</a></li>
+            </ul>{% endcomment %}
+
+            <div class="page-header">
+                <h1>What we do</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img data-src="holder.js/200x200" class="img-thumbnail" alt="what we do thumbnail">
+                </div>
+                <div class="col-md-8">
+                    Sparkzones is a professional results-oriented analytic solutions, services and software tools provider. We focuses on design and implementation of marketing analytic and strategic solutions for various industry fields including retail, telecommunication and financial services.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img data-src="holder.js/200x200" class="img-thumbnail" alt="what we do thumbnail">
+                </div>
+                <div class="col-md-8">
+                    We specialize in the application of advanced analytics to business problems, using advanced methods that go beyond basic reporting querying, and alerts and we're experts in the practical application of statistical analysis, forecasting, predictive modeling, and optimization methods.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img data-src="holder.js/200x200" class="img-thumbnail" alt="what we do thumbnail">
+                </div>
+                <div class="col-md-8">
+                     We analyze targeted issues and solves complex problems for business strategy, operational improvement, product development, marketing, and advertising. We’re engaged to help corporate clients improve financial performance and their their odds when making marketing investment decisions.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="spark-selection-service">
+            <div class="page-header">
+                <h1>Mix Media Optimizer</h1>
+                <br/>
+                <br/>
+                <p>
+                    Budget $200,000
+                    <input id="slide" data-slider-id='ex1Slider' type="text" data-slider-min="200000" data-slider-max="800000" data-slider-step="100000" data-slider-value="500000" />
+                    $800,000
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="chart1" class="svg-sm">
+                        <p>Total Budget</p>
+                        <svg></svg>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="chart2" class="svg-sm">
+                        <p>Total Sales</p>
+                        <svg></svg>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="chart3" class="svg-md">
+                        <p>Optimized Budget Decomposition</p>
+                        <svg></svg>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="chart4" class="svg-md">
+                        <p>Optimized Sales Decomposition</p>
+                        <svg></svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
         <div class="page-header">
-          <h1>Mix Media Optimizer</h1>
+            <h1>List groups</h1>
         </div>
-        <div class="well">
-          <p>Budget $200,000
-          <input id="slide" data-slider-id='ex1Slider' type="text" data-slider-min="200000" data-slider-max="800000" data-slider-step="100000" data-slider-value="500000" />
-          $800,000</p>
+        <div class="row">
+            <div class="col-sm-4">
+                <ul class="list-group">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div><!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                        Cras justo odio
+                    </a>
+                    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                    <a href="#" class="list-group-item">Morbi leo risus</a>
+                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item">Vestibulum at eros</a>
+                </div>
+            </div><!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">List group item heading</h4>
+                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    </a>
+                </div>
+            </div><!-- /.col-sm-4 -->
         </div>
-        <div id="chart1" class="svg-md">
-          <svg></svg>
+
+
+        <div class="page-header">
+            <h1>Panels</h1>
         </div>
-
-
-      <div class="page-header">
-        <h1>Navs</h1>
-      </div>
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
-      </ul>
-
-
-      <div class="page-header">
-        <h1>List groups</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">
-              Cras justo odio
-            </a>
-            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item">Morbi leo risus</a>
-            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item">Vestibulum at eros</a>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-          </div>
-        </div><!-- /.col-sm-4 -->
-      </div>
-
-
-      <div class="page-header">
-        <h1>Panels</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="panel panel-success">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="panel panel-warning">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-danger">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-      </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div><!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div><!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                    </div>
+                </div>
+            </div><!-- /.col-sm-4 -->
+        </div>
 
     </div>
 
     <script>
-      historicalBarChart = [
-        {
-          key: "Cumulative Return",
-          values: [
-            {
-              "label" : "A" ,
-              "value" : 29.765957771107
-            } ,
-            {
-              "label" : "B" ,
-              "value" : 0
-            } ,
-            {
-              "label" : "C" ,
-              "value" : 32.807804682612
-            } ,
-            {
-              "label" : "D" ,
-              "value" : 196.45946739256
-            } ,
-            {
-              "label" : "E" ,
-              "value" : 0.19434030906893
-            } ,
-            {
-              "label" : "F" ,
-              "value" : 98.079782601442
-            } ,
-            {
-              "label" : "G" ,
-              "value" : 13.925743130903
-            } ,
-            {
-              "label" : "H" ,
-              "value" : 5.1387322875705
-            }
-          ]
+        $(document).ready(function () {
+            $("#slide").slider({
+                tooltip: 'always',
+                handle: 'round',
+                formatter: function (value) {
+                    var result = "";
+                    var val = value.toString();
+                    while (val.length > 3) {
+                        result += ',' + val.substr(val.length - 4, 3);
+                        val = val.substr(0, val.length - 3);
+                    }
+                    return '$' + val + result;
+                }
+            });
+            $("#slide").on("slideStop", onSlideStop);
+            onSlideStop();
+        });
+
+        function onSlideStop () {
+            $.getJSON("{% url 'polls:opt' %}", {budget: $('#slide').val()})
+                    .done(function (data) {
+                        drawChart(data);
+                    })
+                    .fail(function (jqXHR, textStatus, err) {
+                        console.log('Error: ' + err);
+                    });
         }
-      ];
 
-      nv.addGraph(function() {
-        var chart = nv.models.discreteBarChart()
-            .x(function(d) { return d.label })
-            .y(function(d) { return d.value })
-            .staggerLabels(false)
-            //.staggerLabels(historicalBarChart[0].values.length > 8)
-            .tooltips(true)
-            .showValues(true)
-            .transitionDuration(250)
-            ;
+        function drawChart(data) {
+            drawBarChartHorizontal(parseInt($('#slide').val()), 579551, '#chart1 svg', 'Budget');
+            drawBarChartHorizontal(data.total_sales, 11185348, '#chart2 svg', 'Sales');
+            var budget_base = [0.0557, 0.0682, 0.1748, 0.0069, 0.1120, 0.22255, 0.22255, 0.1373];
+            drawBarChartVertical(data, budget_base, '#chart3 svg');
+            var sale_base = [2.0548, 13.2120, 1.0123, 1.0470, 1.2783, 3.9381, 3.9381, 11.4543];
+            drawBarChartVertical(data, sale_base, '#chart4 svg');
+        }
 
-        d3.select('#chart1 svg')
-            .datum(historicalBarChart)
-            .call(chart);
+        function drawBarChartHorizontal(val, base_val, chart_id, label){
+            var bar_data = [];
+            bar_data.push({key: 'Optimized', color: 'blue', values: [{label: label, value: val}]});
+            bar_data.push({key: 'Baseline', color: 'red', values: [{label: label, value: base_val}]});
 
-        nv.utils.windowResize(chart.update);
+            nv.addGraph(function() {
+                var chart = nv.models.multiBarHorizontalChart()
+                        .x(function(d) { return d.label })
+                        .y(function(d) { return d.value })
+                        //.margin({top: 30, right: 20, bottom: 50, left: 175})
+                        .showValues(false)           //Show bar value next to each bar.
+                        .tooltips(true)             //Show tooltips on hover.
+                        .transitionDuration(350)
+                        .showControls(false);        //Allow user to switch between "Grouped" and "Stacked" mode.
 
-        return chart;
-      });
+                chart.xAxis
+                        .showMaxMin(false)
 
+                chart.yAxis
+                        .showMaxMin(false)
+                        .tickFormat(d3.format(',.0f'));
 
-      $(document).ready(function () {
-          $("#slide").slider({
-              tooltip: 'always',
-              handle: 'round',
-              formatter: function (value) {
-                  var result = "";
-                  var val = value.toString();
-                  while (val.length > 3) {
-                      result += ',' + val.substr(val.length - 4, 3);
-                      val = val.substr(0, val.length - 3);
-                  }
-                  return '$' + val + result;
+                d3.select(chart_id)
+                        .datum(bar_data)
+                        .call(chart);
+
+                nv.utils.windowResize(chart.update);
+
+                return chart;
+            });
+        }
+
+        function drawBarChartVertical(data, base, chart_id) {
+            var bar_data = [];
+            var optimized_values = [];
+            var baseline_values = [];
+            for (var i = 0; i < data.channals.length; i++) {
+                optimized_values.push({x: data.channals[i], y: data.paras[i]});
+                baseline_values.push({x: data.channals[i], y: Math.round(Number(579551 * base[i]))});
+            }
+            bar_data.push({key: 'Optimized', color: 'blue', values: optimized_values});
+            bar_data.push({key: 'Baseline', color: 'red', values: baseline_values});
+
+            nv.addGraph(function() {
+                var chart = nv.models.multiBarChart()
+                                //.barColor(d3.scale.category20().range())
+                                //.margin({bottom: 50})
+                                .transitionDuration(300)
+                                .delay(0)
+                                //.rotateLabels(45)
+                                .groupSpacing(0.4)
+                                .showControls(false)
+                        ;
+
+                chart.multibar
+                        .hideable(true);
+
+                chart.reduceXTicks(false).staggerLabels(false);
+
+                chart.xAxis
+                        .axisLabel("Channels")
+                        .showMaxMin(false)
+                        //.tickFormat(d3.format(',.6f'));
+
+                chart.yAxis
+                        .showMaxMin(false)
+                        .tickFormat(d3.format(',.0f'));
+
+                d3.select(chart_id)
+                        .datum(bar_data)
+                        .call(chart);
+
+                nv.utils.windowResize(chart.update);
+
+                chart.dispatch.on('stateChange', function(e) { nv.log('New State:', JSON.stringify(e)); });
+
+                return chart;
+            });
+
+        }
+
+        {% comment %}var historicalBarChart = [
+          {
+            key: "Cumulative Return",
+            values: [
+              {
+                "label" : "A" ,
+                "value" : 29.765957771107
+              } ,
+              {
+                "label" : "B" ,
+                "value" : 0
+              } ,
+              {
+                "label" : "C" ,
+                "value" : 32.807804682612
+              } ,
+              {
+                "label" : "D" ,
+                "value" : 196.45946739256
+              } ,
+              {
+                "label" : "E" ,
+                "value" : 0.19434030906893
+              } ,
+              {
+                "label" : "F" ,
+                "value" : 98.079782601442
+              } ,
+              {
+                "label" : "G" ,
+                "value" : 13.925743130903
+              } ,
+              {
+                "label" : "H" ,
+                "value" : 5.1387322875705
               }
-          });
-          $("#slide").on("slideStop", function (slideEvt) {
-              var aa = $('#slide').val();
-              if (slideEvt.value != this.budget) {
-                  console.log(slideEvt.value);
-                  //drawChart();
-                  $.getJSON("{% url 'polls:opt' %}")
-                      .done(function (data) {
-                          alert('great');
-                      })
-                      .fail(function (jqXHR, textStatus, err) {
-                          alert('Error: ' + err);
-                      });
-              }
-          });
-      });
+            ]
+          }
+        ];
 
+        nv.addGraph(function() {
+          var chart = nv.models.discreteBarChart()
+              .x(function(d) { return d.label })
+              .y(function(d) { return d.value })
+              .staggerLabels(false)
+              //.staggerLabels(historicalBarChart[0].values.length > 8)
+              .tooltips(true)
+              .showValues(true)
+              .transitionDuration(250)
+              ;
 
-    {% comment %}function drawChart() {
-        this.budget = $('#slide').val();
-        if (budget == null) return false;
-        $.getJSON("/polls/50000/budget")
-          .done(function (data) {
-              alert('great');
-          })
-          .fail(function (jqXHR, textStatus, err) {
-              alert('Error: ' + err);
-          });
-    }{% endcomment %}
+          d3.select('#chart1 svg')
+              .datum(historicalBarChart)
+              .call(chart);
+
+          nv.utils.windowResize(chart.update);
+
+          return chart;
+        });{% endcomment %}
+
 
     </script>
 
