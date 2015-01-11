@@ -3,17 +3,6 @@
 
 {% block content %}
 
-    <!-- Main jumbotron for a primary marketing message or call to action
-    <div class="page-header">
-      <h1>Spark Zones</h1>
-      <h2>Data enlighten the world</h2>
-    </div>-->
-
-    {% comment %}<div class="page-header">
-        <h1>Thumbnails</h1>
-      </div>
-      <img data-src="holder.js/200x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">{% endcomment %}
-
     <div id="carousel-example-generic" class="carousel slide" data-pause="false" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -182,26 +171,7 @@
 
     <div id="content-case" class="section content-case">
 
-        {% comment %}{% if latest_question_list %}
-            <ul>
-                {% for question in latest_question_list %}
-                    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No polls are available...</p>
-        {% endif %}{% endcomment %}
-
         <div class="container">
-            {% comment %}<div class="page-header">
-                <h1>Navs</h1>
-            </div>
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#">Home</a></li>
-                <li role="presentation"><a href="#">Profile</a></li>
-                <li role="presentation"><a href="#">Messages</a></li>
-            </ul>{% endcomment %}
-
             <h2>Case Study</h2>
             <div class="row">
                 <div class="col-md-12">
