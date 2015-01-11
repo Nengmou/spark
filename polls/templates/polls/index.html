@@ -25,44 +25,118 @@
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 {% comment %}<img data-src="holder.js/1920x500/auto/#777:#555/text:First slide" alt="First slide">{% endcomment %}
-                <img src="{% static 'polls/images/0.jpg' %}" alt="First slide"/>
+                <img src="{% static 'polls/images/slides/0.jpg' %}" alt="First slide"/>
                 <div class="carousel-caption">
                     <h2>Customer-Centric Analysis</h2>
                     <p>Everything you need to know about your customers, and how to turn that knowledge into profit</p>
                 </div>
             </div>
             <div class="item">
-                <img src="{% static 'polls/images/1.jpg' %}" alt="Second slide">
+                <img src="{% static 'polls/images/slides/1.jpg' %}" alt="Second slide">
                 <div class="carousel-caption">
                     <h2>Media-Centric Analysis</h2>
                     <p>Gain insight into your media investment and optimize your ROI</p>
                 </div>
             </div>
             <div class="item">
-                <img src="{% static 'polls/images/2.jpg' %}" alt="Second slide">
+                <img src="{% static 'polls/images/slides/2.jpg' %}" alt="Second slide">
                 <div class="carousel-caption">
                     <h2>Campaign-Centric Analysis</h2>
                     <p>How to design an effective marketing campaign and how to monitor and evaluate the performance of it</p>
                 </div>
             </div>
             <div class="item">
-                <img src="{% static 'polls/images/3.jpg' %}" alt="Third slide">
+                <img src="{% static 'polls/images/slides/3.jpg' %}" alt="Third slide">
                 <div class="carousel-caption">
                     <h2>Product-Centric Analysis</h2>
                     <p>Making better pricing strategy and understand the association of the products could increase your sales and profits</p>
                 </div>
             </div>
             <div class="item">
-                <img src="{% static 'polls/images/4.jpg' %}" alt="Fourth slide">
+                <img src="{% static 'polls/images/slides/4.jpg' %}" alt="Fourth slide">
                 <div class="carousel-caption">
-                    <h2>Spark Zones</h2>
+                    <h2>Sparkzones</h2>
                     <p>Data enlighten the world</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container">
+    <div id="content-service" class="section content-service">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-thumbnail" src="{% static 'polls/images/thumbnail/customer.png' %}" alt="Services">
+                    <h3>Customer-Centric Analysis</h3>
+                    <p>
+                        Everything you need to know about your customers, and how to turn that knowledge into profit.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img class="img-thumbnail" src="{% static 'polls/images/thumbnail/media.png' %}" alt="Services">
+                    <h3>Media-Centric Analysis</h3>
+                    <p>
+                        Gain insight into your media investment and optimize your ROI.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img class="img-thumbnail" src="{% static 'polls/images/thumbnail/campaign.png' %}" alt="Services">
+                    <h3>Campaign-Centric Analysis</h3>
+                    <p>
+                        How to design an effective marketing campaign and how to monitor and evaluate the performance of it.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img class="img-thumbnail" src="{% static 'polls/images/thumbnail/product.png' %}" alt="Services">
+                    <h3>Product-Centric Analysis</h3>
+                    <p>
+                        Making better pricing strategy and understand the association of the products could increase your sales and profits.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Mix Media Optimizer - Live Demo</h3>
+                    <br/>
+                    <br/>
+                    <p>
+                        Budget: $200,000
+                        <input id="slide" data-slider-id='ex1Slider' type="text" data-slider-min="200000" data-slider-max="800000" data-slider-step="100000" data-slider-value="500000" />
+                        $800,000
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div id="chart1" class="svg-sm">
+                        <p class="text-center">Total Budget</p>
+                        <svg></svg>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="chart2" class="svg-sm">
+                        <p class="text-center">Total Sales</p>
+                        <svg></svg>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="chart3" class="svg-md">
+                        <p class="text-center">Optimized Budget Decomposition</p>
+                        <svg></svg>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="chart4" class="svg-md">
+                        <p class="text-center">Optimized Sales Decomposition</p>
+                        <svg></svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="content-about" class="section content-about">
 
         {% comment %}{% if latest_question_list %}
             <ul>
@@ -74,7 +148,7 @@
             <p>No polls are available...</p>
         {% endif %}{% endcomment %}
 
-        <div class="spark-selection-what">
+        <div class="container">
             {% comment %}<div class="page-header">
                 <h1>Navs</h1>
             </div>
@@ -84,178 +158,113 @@
                 <li role="presentation"><a href="#">Messages</a></li>
             </ul>{% endcomment %}
 
-            <div class="page-header">
-                <h1>What we do</h1>
-            </div>
+            <h2>About US</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <img data-src="holder.js/200x200" class="img-thumbnail" alt="what we do thumbnail">
+                <div class="col-md-12">
+                    <p>
+                        Sparkzones is a professional results-oriented analytic solutions, services and software tools provider. We focuses on design and implementation of marketing analytic and strategic solutions for various industry fields including retail, telecommunication and financial services.
+                    </p>
                 </div>
-                <div class="col-md-8">
-                    Sparkzones is a professional results-oriented analytic solutions, services and software tools provider. We focuses on design and implementation of marketing analytic and strategic solutions for various industry fields including retail, telecommunication and financial services.
+                <div class="col-md-12">
+                    <p>We specialize in the application of advanced analytics to business problems, using advanced methods that go beyond basic reporting querying, and alerts and we're experts in the practical application of statistical analysis, forecasting, predictive modeling, and optimization methods.
+                    </p>
+                </div>
+                <div class="col-md-12">
+                    <p>We analyze targeted issues and solves complex problems for business strategy, operational improvement, product development, marketing, and advertising. We’re engaged to help corporate clients improve financial performance and their their odds when making marketing investment decisions.
+                    </p>
                 </div>
             </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="content-case" class="section content-case">
+
+        {% comment %}{% if latest_question_list %}
+            <ul>
+                {% for question in latest_question_list %}
+                    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No polls are available...</p>
+        {% endif %}{% endcomment %}
+
+        <div class="container">
+            {% comment %}<div class="page-header">
+                <h1>Navs</h1>
+            </div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages</a></li>
+            </ul>{% endcomment %}
+
+            <h2>Case Study</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <img data-src="holder.js/200x200" class="img-thumbnail" alt="what we do thumbnail">
+                <div class="col-md-12">
+                    <p>
+                        Sparkzones is a professional results-oriented analytic solutions, services and software tools provider. We focuses on design and implementation of marketing analytic and strategic solutions for various industry fields including retail, telecommunication and financial services.
+                    </p>
                 </div>
-                <div class="col-md-8">
-                    We specialize in the application of advanced analytics to business problems, using advanced methods that go beyond basic reporting querying, and alerts and we're experts in the practical application of statistical analysis, forecasting, predictive modeling, and optimization methods.
+                <div class="col-md-12">
+                    <p>We specialize in the application of advanced analytics to business problems, using advanced methods that go beyond basic reporting querying, and alerts and we're experts in the practical application of statistical analysis, forecasting, predictive modeling, and optimization methods.
+                    </p>
+                </div>
+                <div class="col-md-12">
+                    <p>We analyze targeted issues and solves complex problems for business strategy, operational improvement, product development, marketing, and advertising. We’re engaged to help corporate clients improve financial performance and their their odds when making marketing investment decisions.
+                    </p>
                 </div>
             </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="content-solution" class="section content-solution">
+
+        {% comment %}{% if latest_question_list %}
+            <ul>
+                {% for question in latest_question_list %}
+                    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No polls are available...</p>
+        {% endif %}{% endcomment %}
+
+        <div class="container">
+            {% comment %}<div class="page-header">
+                <h1>Navs</h1>
+            </div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages</a></li>
+            </ul>{% endcomment %}
+
+            <h2>Solutions</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <img data-src="holder.js/200x200" class="img-thumbnail" alt="what we do thumbnail">
+                <div class="col-md-12">
+                    <p>
+                        Sparkzones is a professional results-oriented analytic solutions, services and software tools provider. We focuses on design and implementation of marketing analytic and strategic solutions for various industry fields including retail, telecommunication and financial services.
+                    </p>
                 </div>
-                <div class="col-md-8">
-                     We analyze targeted issues and solves complex problems for business strategy, operational improvement, product development, marketing, and advertising. We’re engaged to help corporate clients improve financial performance and their their odds when making marketing investment decisions.
+                <div class="col-md-12">
+                    <p>We specialize in the application of advanced analytics to business problems, using advanced methods that go beyond basic reporting querying, and alerts and we're experts in the practical application of statistical analysis, forecasting, predictive modeling, and optimization methods.
+                    </p>
                 </div>
-            </div>
-
-        </div>
-
-        <div class="spark-selection-service">
-            <div class="page-header">
-                <h1>Mix Media Optimizer</h1>
-                <br/>
-                <br/>
-                <p>
-                    Budget $200,000
-                    <input id="slide" data-slider-id='ex1Slider' type="text" data-slider-min="200000" data-slider-max="800000" data-slider-step="100000" data-slider-value="500000" />
-                    $800,000
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div id="chart1" class="svg-sm">
-                        <p>Total Budget</p>
-                        <svg></svg>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="chart2" class="svg-sm">
-                        <p>Total Sales</p>
-                        <svg></svg>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="chart3" class="svg-md">
-                        <p>Optimized Budget Decomposition</p>
-                        <svg></svg>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div id="chart4" class="svg-md">
-                        <p>Optimized Sales Decomposition</p>
-                        <svg></svg>
-                    </div>
+                <div class="col-md-12">
+                    <p>We analyze targeted issues and solves complex problems for business strategy, operational improvement, product development, marketing, and advertising. We’re engaged to help corporate clients improve financial performance and their their odds when making marketing investment decisions.
+                    </p>
                 </div>
             </div>
 
         </div>
 
-        <div class="page-header">
-            <h1>List groups</h1>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <ul class="list-group">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-            </div><!-- /.col-sm-4 -->
-            <div class="col-sm-4">
-                <div class="list-group">
-                    <a href="#" class="list-group-item active">
-                        Cras justo odio
-                    </a>
-                    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-                    <a href="#" class="list-group-item">Morbi leo risus</a>
-                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-                    <a href="#" class="list-group-item">Vestibulum at eros</a>
-                </div>
-            </div><!-- /.col-sm-4 -->
-            <div class="col-sm-4">
-                <div class="list-group">
-                    <a href="#" class="list-group-item active">
-                        <h4 class="list-group-item-heading">List group item heading</h4>
-                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    </a>
-                    <a href="#" class="list-group-item">
-                        <h4 class="list-group-item-heading">List group item heading</h4>
-                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    </a>
-                    <a href="#" class="list-group-item">
-                        <h4 class="list-group-item-heading">List group item heading</h4>
-                        <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    </a>
-                </div>
-            </div><!-- /.col-sm-4 -->
-        </div>
-
-
-        <div class="page-header">
-            <h1>Panels</h1>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Panel title</h3>
-                    </div>
-                    <div class="panel-body">
-                        Panel content
-                    </div>
-                </div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Panel title</h3>
-                    </div>
-                    <div class="panel-body">
-                        Panel content
-                    </div>
-                </div>
-            </div><!-- /.col-sm-4 -->
-            <div class="col-sm-4">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Panel title</h3>
-                    </div>
-                    <div class="panel-body">
-                        Panel content
-                    </div>
-                </div>
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Panel title</h3>
-                    </div>
-                    <div class="panel-body">
-                        Panel content
-                    </div>
-                </div>
-            </div><!-- /.col-sm-4 -->
-            <div class="col-sm-4">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Panel title</h3>
-                    </div>
-                    <div class="panel-body">
-                        Panel content
-                    </div>
-                </div>
-                <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Panel title</h3>
-                    </div>
-                    <div class="panel-body">
-                        Panel content
-                    </div>
-                </div>
-            </div><!-- /.col-sm-4 -->
-        </div>
 
     </div>
 
@@ -306,7 +315,7 @@
                 var chart = nv.models.multiBarHorizontalChart()
                         .x(function(d) { return d.label })
                         .y(function(d) { return d.value })
-                        //.margin({top: 30, right: 20, bottom: 50, left: 175})
+                    //.margin({top: 30, right: 20, bottom: 50, left: 175})
                         .showValues(false)           //Show bar value next to each bar.
                         .tooltips(true)             //Show tooltips on hover.
                         .transitionDuration(350)
@@ -342,12 +351,12 @@
 
             nv.addGraph(function() {
                 var chart = nv.models.multiBarChart()
-                                //.barColor(d3.scale.category20().range())
-                                //.margin({bottom: 50})
+                            //.barColor(d3.scale.category20().range())
+                            //.margin({bottom: 50})
                                 .transitionDuration(300)
                                 .delay(0)
-                                //.rotateLabels(45)
-                                .groupSpacing(0.4)
+                            //.rotateLabels(45)
+                                .groupSpacing(0.3)
                                 .showControls(false)
                         ;
 
@@ -359,7 +368,7 @@
                 chart.xAxis
                         .axisLabel("Channels")
                         .showMaxMin(false)
-                        //.tickFormat(d3.format(',.6f'));
+                //.tickFormat(d3.format(',.6f'));
 
                 chart.yAxis
                         .showMaxMin(false)
