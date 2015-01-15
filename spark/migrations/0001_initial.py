@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='choice',
             name='question',
-            field=models.ForeignKey(to='polls.Question'),
+            field=models.ForeignKey(to='spark.Question'),
             preserve_default=True,
         ),
     ]

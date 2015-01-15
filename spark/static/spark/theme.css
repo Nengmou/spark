@@ -1,0 +1,112 @@
+/*body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}*/
+
+body {
+  font-family: Georgia,"Times New Roman",Times,serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+footer {
+  font-size: 12px;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-inverse {
+    background: rgba(0,0,0,0.6);
+}
+
+
+.content-about {
+  background: #90ee90;
+}
+
+.content-service {
+  background: #ffffff;
+}
+
+.content-solution {
+  background: #d3d3d3;
+}
+
+.content-case {
+  background: #ffffff;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.section h2 {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 300;
+  margin: 0 0 20px;
+  padding: 6px 15px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section h3 {
+  font-size: 17px;
+  font-weight: 200;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.slider-handle {
+    opacity: 1.0;
+}
+
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.svg-md{
+  height: 500px;
+  min-width: 100px;
+  min-height: 100px;
+  margin: 30px 0px;
+/*
+  margin: 10px;
+  Minimum height and width is a good idea to prevent negative SVG dimensions...
+  For example width should be =< margin.left + margin.right + 1,
+  of course 1 pixel for the entire chart would not be very useful, BUT should not have errors
+*/
+}
+
+.svg-sm{
+  height: 200px;
+  min-width: 100px;
+  min-height: 100px;
+  margin: 30px 0px;
+}
+
+.img-thumbnail {
+  width: 50%;
+  margin-left: 15%;
+  height: auto;
+  border: 0px;
+}

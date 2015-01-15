@@ -1,5 +1,5 @@
 from django.contrib import admin
-from polls.models import Choice, Question
+from spark.models import Choice, Question
 
 
 class ChoiceInline(admin.TabularInline):
