@@ -4,7 +4,7 @@ from django.core.urlresolvers import reverse
 from django.views import generic
 from django.utils import timezone
 
-import pyRserve
+# import pyRserve
 import json
 
 from polls.models import Choice, Question
@@ -57,11 +57,11 @@ def vote(request, question_id):
 
 
 def opt(request):
-    conn = pyRserve.connect()
-    conn.eval('rm(list=ls())')
-    conn.r.input_total_amt = int(request.GET['budget'])
-    res2 = conn.eval("source('C:/Users/yixiang/Desktop/opt_total.R')")
-    result = json.loads(res2['value'])
-    conn.close()
-    return HttpResponse(json.dumps(result), content_type='application/json')
-    # return HttpResponse(json.dumps('sample data'), content_type='application/json')
+    # conn = pyRserve.connect()
+    # conn.eval('rm(list=ls())')
+    # conn.r.input_total_amt = int(request.GET['budget'])
+    # res2 = conn.eval("source('C:/Users/yixiang/Desktop/opt_total.R')")
+    # result = json.loads(res2['value'])
+    # conn.close()
+    # return HttpResponse(json.dumps(result), content_type='application/json')
+    return HttpResponse(json.dumps('sample data'), content_type='application/json')
